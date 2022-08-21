@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font Editor</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Open+Sans:wght@300&family=Poppins:wght@100&family=Roboto:wght@100&family=Silkscreen&display=swap');
+
+        /*
+        font-family: 'Dancing Script', cursive;
+        font-family: 'Open Sans', sans-serif;
+        font-family: 'Poppins', sans-serif;
+        font-family: 'Roboto', sans-serif;
+        font-family: 'Silkscreen', cursive; 
+         */
+        .text {
+            text-align: center;
+            padding: 100px 50px;
+        }
+        .toolbar{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="toolbar">
+        <input type="color" name="" id="Color">
+        <input type="range" name="" id="size" min="1", max="20">
+        <select name="" id="font-family" value="">
+            <option value="san-serif"> Default</option>
+            <option value="Poppins">Poppins</option>
+            <option value="cursive">cursive</option>
+            <option value="Dancing Script">Dancing Script</option>
+            <option value="Silkscreen">Silkscreen</option>
+            <option value="Poppins">Poppins</option>
+            <option value="Poppins">Poppins</option>
+        </select>
+        <button onclick="document.getElementById('text').style.fontFamily = document.getElementById('font-family').value,
+                        document.getElementById('text').style.color = document.getElementById('Color').value,
+                        document.getElementById('text').style.fontSize = `${document.getElementById('size').value}rem`
+
+        ">Font Change </button>
+
+    </div>
+
+    <h1 class="text" id="text">This is The Text</h1>
+
+</body>
+
+</html>
